@@ -1,0 +1,146 @@
+.App {
+  text-align: center;
+  height: 100%;
+}
+.form-group, .title-header {
+  width: 60%;
+}
+@media (max-width: 1000px) {
+  .form-group, .title-header {
+    width: 100%;
+  }
+}
+.planet {
+  color: lightseagreen;
+  border: solid 1px rgb(255, 217, 0);
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+}
+.planet-details {
+  margin-top: 10rem;
+  margin-left: 2rem;
+}
+.planet-img {
+  animation: z-rotate 20s linear infinite;
+}
+.col-4 {
+  animation: open-slide;
+  animation-duration: 1s;
+}
+.showall, .showall:focus {
+  width: 50%;
+  outline: none;
+}
+.green {
+  color: lightseagreen;
+}
+button {
+  background-color: rgb(255, 217, 0) !important;
+  font-family: "Press Start 2P", sans-serif;
+  width: 100%;
+  outline: none;
+}
+.button {
+  border: none;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+.noshow {
+  display: none;
+}
+h1, h2, h3, h4, h5 {
+  color: rgb(255, 217, 0) !important;
+}
+input, input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: solid 2px rgb(255, 217, 0) !important;
+  background: none !important;
+}
+i {
+  font-size: 1.4rem;
+}
+.loading-main {
+  width: 45%;
+}
+.one {
+  animation: letter-jump 0.5s infinite, App-logo-resize 0.5s infinite;
+}
+.two {
+  animation: letter-jump 0.5s infinite, App-logo-resize 0.5s infinite;
+  animation-delay: 0.1s;
+}
+.three {
+  animation: letter-jump 0.5s infinite, App-logo-resize 0.5s infinite;
+  animation-delay: 0.2s;
+}
+.four {
+  animation: letter-jump 0.5s infinite, App-logo-resize 0.5s infinite;
+  animation-delay: 0.3s;
+}
+.five {
+  animation: letter-jump 0.5s infinite, App-logo-resize 0.5s infinite;
+  animation-delay: 0.4s;
+}
+.six {
+  animation: letter-jump 0.5s infinite, App-logo-resize 0.5s infinite;
+  animation-delay: 0.5s;
+}
+.seven {
+  animation: letter-jump 0.5s infinite, App-logo-resize 0.5s infinite;
+  animation-delay: 0.6s;
+}
+.loading-screen {
+  font-size: 3rem;
+  color: rgb(255, 217, 0);
+}
+.title-header {
+  text-align: left;
+  font-size: 1.3rem;
+  color: rgb(255, 217, 0);
+  font-family: "Press Start 2P", sans-serif;
+  border-bottom: solid 4px rgb(255, 217, 0);
+  animation: floating-title 5s infinite;
+}
+.title {
+  font-size: 1.3rem;
+  color: rgb(255, 217, 0);
+  font-family: "Press Start 2P", sans-serif;
+}
+.App-logo {
+  animation: App-logo-resize infinite 10s;
+  height: 80px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-resize {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+@keyframes floating-title {
+  0% {text-align: left}
+  50% {text-align: center}
+  80% {text-align: right}
+  100% {text-align: left}
+}
+
+@keyframes open-slide {
+  from {height: 0px} to {height: 80px}
+}
+
+@keyframes letter-jump {
+  0% {color: rgb(255, 217, 0)}
+  50% {color: lightseagreen}
+  100% {color: rgb(255, 217, 0)}
+}
+
+@keyframes z-rotate {
+  0% {transform: rotate(0deg); }
+  100% {transform: rotate(360deg); }
+}
