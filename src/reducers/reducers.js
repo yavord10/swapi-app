@@ -1,24 +1,38 @@
-import { SHOW_PLANET, FETCH_PLANETS} from '../actions/actions';
+import { SHOW_OBJECT, FETCH_PLANETS, TOGGLE_FF, FETCH_PEOPLE} from '../actions/actions';
 
 
 const initialState = {
     showAll : false,
-    chosenPlanet: {},
-    showPlanet : false,
+    chosenObject: {},
+    showObject : false,
     fetchFinished: false,
     planets: {},
+    people: {},
 };
 
 function rootReducer(state = initialState, action) {
     switch(action.type) {
-        case SHOW_PLANET:
+        case SHOW_OBJECT:
             return {
-                showPlanet: action.showPlanet,
-                chosenPlanet: action.chosenPlanet
+                ...initialState,
+                showObject: action.showObject,
+                chosenObject: action.chosenObject
             }
         case FETCH_PLANETS:
             return {
-                planets: Object.assign(state.planets,action.planets),
+                ...initialState,
+                planets: Object.assign(state.planets, action.planets),
+                fetchFinished: action.fetch
+            }
+        case FETCH_PEOPLE:
+            return {
+                ...initialState,
+                people: Object.assign(state.people, action.people),
+                fetchFinished: action.fetch
+            }
+        case TOGGLE_FF:
+            return {
+                ...initialState,
                 fetchFinished: action.fetch
             }
         default:

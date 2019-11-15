@@ -11,18 +11,22 @@
   }
 }
 .planet {
-  color: lightseagreen;
-  border: solid 1px rgb(255, 217, 0);
+  color: black;
   border-radius: 0.2rem;
   padding: 0.3rem;
   font-size: 0.8rem;
 }
 .planet-details {
-  margin-top: 10rem;
-  margin-left: 2rem;
+  margin-top: 5rem;
+  margin-left: 1rem;
 }
 .planet-img {
   animation: z-rotate 20s linear infinite;
+}
+.people-img  {
+  animation: slide-right 4s linear infinite, background-color 1s linear infinite alternate;
+  border-radius: 10rem;
+  border-top-right-radius: 1rem;
 }
 .col-4 {
   animation: open-slide;
@@ -40,12 +44,27 @@ button {
   font-family: "Press Start 2P", sans-serif;
   width: 100%;
   outline: none;
+  border: none;
 }
 .button {
   border: none;
   border-radius: 0.2rem;
   margin-bottom: 1rem;
   outline: none;
+}
+.back-btn-ctn {
+  width: 100%;
+}
+.back-btn, .back-btn:focus {
+  padding-left: 0.6rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  outline: none;
+}
+button:hover {
+  background-color: lightseagreen !important;
+  transform: scale(1.2);
+  transition: 1s;
 }
 .noshow {
   display: none;
@@ -143,4 +162,17 @@ i {
 @keyframes z-rotate {
   0% {transform: rotate(0deg); }
   100% {transform: rotate(360deg); }
+}
+
+@keyframes slide-right {
+  0% {transform: translate(0px, 5rem)}
+  25% {transform: translate(1rem, 5rem) rotate(0deg)}
+  50% {transform: translate(18rem, 5rem) rotate(360deg)}
+  75% {transform: translate(19rem, 5rem) rotate(360deg)}
+  100% {transform: translate(0px, 5rem)}
+}
+
+@keyframes background-color {
+  0% {background-color: none}
+  100% {background-color: rgb(173,255,47, 0.15); box-shadow: 0px 0px 6rem 3rem rgb(173,255,47, 0.2)}
 }
